@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarqueeTextBox", "MarqueeTextBox\MarqueeTextBox.csproj", "{A54ED95F-D2C2-420C-A71A-1CBCF4DBDCB2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A54ED95F-D2C2-420C-A71A-1CBCF4DBDCB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A54ED95F-D2C2-420C-A71A-1CBCF4DBDCB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A54ED95F-D2C2-420C-A71A-1CBCF4DBDCB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A54ED95F-D2C2-420C-A71A-1CBCF4DBDCB2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E88DC943-CFEF-4423-A2AA-0882695B6676}
+	EndGlobalSection
+EndGlobal
