@@ -1,0 +1,19 @@
+﻿<Window x:Class="MarqueeTextBoxTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MarqueeTextBoxTest"
+        xmlns:mtb="clr-namespace:MarqueeTextBox;assembly=MarqueeTextBox"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <!--<Label Content="test" />-->
+        <mtb:MarqueeLabel Content="This is a test name for a string that is longer than the size" Width="200" Name="TestMarquee" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Button Content="Play" Click="OnClick_Play" Width="60" Height="20" />
+            <Button Name="PauseResumeButton" Content="Pause" Click="OnClick_PauseResume" Width="60" Height="20" />
+            <Button Content="Stop" Click="OnClick_Stop" Width="60" Height="20" />
+        </StackPanel>
+    </Grid>
+</Window>
