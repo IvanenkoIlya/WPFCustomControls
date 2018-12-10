@@ -23,30 +23,42 @@ namespace MarqueeTextBoxTest
         public MainWindow()
         {
             InitializeComponent();
+
+            Loaded += OnLoaded;
+        }
+
+        private void OnLoaded(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void OnClick_Play(object sender, RoutedEventArgs e)
         {
-            TestMarquee.PlayAnimation();
+            //TestMarquee.PlayAnimation();
         }
 
         private void OnClick_Stop(object sender, RoutedEventArgs e)
         {
-            TestMarquee.StopAnimation();
+            //TestMarquee.StopAnimation();
         }
 
         private void OnClick_PauseResume(object sender, RoutedEventArgs e)
         {
-            if(TestMarquee.storyboard.GetIsPaused())
-            {
-                PauseResumeButton.Content = "Pause";
-                TestMarquee.ResumeAnimation();
-            }
-            else
-            {
-                PauseResumeButton.Content = "Resume";
-                TestMarquee.PauseAnimation();
-            }
+            //if(TestMarquee.storyboard.GetIsPaused())
+            //{
+            //    PauseResumeButton.Content = "Pause";
+            //    TestMarquee.ResumeAnimation();
+            //}
+            //else
+            //{
+            //    PauseResumeButton.Content = "Resume";
+            //    TestMarquee.PauseAnimation();
+            //}
+        }
+
+        private void UpdateLabel(object sender, RoutedEventArgs e)
+        {
+            //TestMarquee.Content = UpdateText.Text;
         }
     }
 }

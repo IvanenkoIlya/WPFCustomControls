@@ -5,15 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MarqueeTextBoxTest"
         xmlns:mtb="clr-namespace:MarqueeTextBox;assembly=MarqueeTextBox"
+        xmlns:cpc="clr-namespace:ConnectorPathControl;assembly=ConnectorPathControl"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <!--<Label Content="test" />-->
-        <mtb:MarqueeLabel Content="This is a test name for a string that is longer than the size" Width="200" Name="TestMarquee" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        Title="MainWindow" Height="400" Width="400" Padding="0" Margin="0">
+    <Canvas>
+        <Ellipse StrokeThickness="1" Fill="Red" Stroke="Black"  Name="Point1" Height="16" Width="16" Canvas.Left="50" Canvas.Top="50"  />
+        <Ellipse StrokeThickness="1" Fill="Orange" Stroke="Black" Name="Point2" Height="16" Width="16" Canvas.Left="300" Canvas.Top="50"/>
+        <Ellipse StrokeThickness="1" Fill="Yellow" Stroke="Black" Name="Point3" Height="16" Width="16" Canvas.Left="300" Canvas.Top="300"/>
+        <Ellipse StrokeThickness="1" Fill="Green" Stroke="Black" Name="Point4" Height="16" Width="16" Canvas.Left="50" Canvas.Top="300"/>
+        <Ellipse StrokeThickness="1" Fill="Blue" Stroke="Black" Name="Point5" Height="16" Width="16" Canvas.Left="100" Canvas.Top="220"/>
+        <Ellipse StrokeThickness="1" Fill="Violet" Stroke="Black" Name="Point6" Height="16" Width="16" Canvas.Left="220" Canvas.Top="250"/>
+        <Ellipse StrokeThickness="1" Fill="Black" Stroke="Black" Name="Point7" Height="16" Width="16" Canvas.Left="130" Canvas.Top="100"/>
+        <Ellipse StrokeThickness="1" Fill="White" Stroke="Black" Name="Point8" Height="16" Width="16" Canvas.Left="250" Canvas.Top="130"/>
+
+        <!--<cpc:ConnectorPath UIElement1="{Binding ElementName=Point1}" UIElement2="{Binding ElementName=Point4}" />        --><!-- Top --><!--
+        <cpc:ConnectorPath UIElement1="{Binding ElementName=Point2}" UIElement2="{Binding ElementName=Point7}" />        --><!-- Top Right Horizontal--><!--
+        <cpc:ConnectorPath UIElement1="{Binding ElementName=Point2}" UIElement2="{Binding ElementName=Point8}" />        --><!-- Top RightVertical--><!--
+        <cpc:ConnectorPath UIElement1="{Binding ElementName=Point2}" UIElement2="{Binding ElementName=Point1}" />        --><!-- Right--><!--
+        <cpc:ConnectorPath UIElement1="{Binding ElementName=Point3}" UIElement2="{Binding ElementName=Point6}" />        --><!-- Bottom Right Horizontal--><!--
+        <cpc:ConnectorPath UIElement1="{Binding ElementName=Point3}" UIElement2="{Binding ElementName=Point8}" />        --><!-- Bottom Right Vertical--><!--
+        <cpc:ConnectorPath UIElement1="{Binding ElementName=Point3}" UIElement2="{Binding ElementName=Point2}" />        --><!-- Bottom --><!--
+        <cpc:ConnectorPath UIElement1="{Binding ElementName=Point4}" UIElement2="{Binding ElementName=Point5}" />        --><!-- Bottom Left Horizontal--><!--
+        <cpc:ConnectorPath UIElement1="{Binding ElementName=Point4}" UIElement2="{Binding ElementName=Point6}" />        --><!-- Bottom Left Vertical--><!--
+        <cpc:ConnectorPath UIElement1="{Binding ElementName=Point4}" UIElement2="{Binding ElementName=Point3}" />        --><!-- Left --><!--
+        <cpc:ConnectorPath UIElement1="{Binding ElementName=Point1}" UIElement2="{Binding ElementName=Point7}" />        --><!-- Top Left Horizontal--><!--
+        <cpc:ConnectorPath UIElement1="{Binding ElementName=Point1}" UIElement2="{Binding ElementName=Point5}" />        --><!-- Top Left Vertical-->
+
+        <cpc:ConnectorPath UIElement1="{Binding ElementName=Point1}" UIElement2="{Binding ElementName=Point1}" />
+        <cpc:ConnectorPath UIElement1="{Binding ElementName=Point1}" UIElement2="{Binding ElementName=Point2}" />
+        <cpc:ConnectorPath UIElement1="{Binding ElementName=Point1}" UIElement2="{Binding ElementName=Point3}" />
+        <cpc:ConnectorPath UIElement1="{Binding ElementName=Point1}" UIElement2="{Binding ElementName=Point4}" />
+        <cpc:ConnectorPath UIElement1="{Binding ElementName=Point1}" UIElement2="{Binding ElementName=Point5}" />
+        <cpc:ConnectorPath UIElement1="{Binding ElementName=Point1}" UIElement2="{Binding ElementName=Point6}" />
+        <cpc:ConnectorPath UIElement1="{Binding ElementName=Point1}" UIElement2="{Binding ElementName=Point7}" />
+        <cpc:ConnectorPath UIElement1="{Binding ElementName=Point1}" UIElement2="{Binding ElementName=Point8}" />
+
+
+        <!--<cpc:ConnectorPath Name="TestPath" UIElement1="{Binding ElementName=TestMarquee}" UIElement2="{Binding ElementName=PauseResumeButton}"/>-->
+        <!--<mtb:MarqueeLabel Content="This is a test name for a string that is longer than the size" Width="200" Name="TestMarquee" SnapsToDevicePixels="False"
+                          HorizontalAlignment="Center" VerticalAlignment="Center" LoopMode="Continuous" ScrollSpeed="2" BorderBrush="Blue" BorderThickness="1"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <TextBox Name="UpdateText" Height="20" Width="300" />
+            <Button Content="Update" Width="75" Click="UpdateLabel"/>
+        </StackPanel>
+
         <StackPanel HorizontalAlignment="Right" VerticalAlignment="Bottom">
             <Button Content="Play" Click="OnClick_Play" Width="60" Height="20" />
             <Button Name="PauseResumeButton" Content="Pause" Click="OnClick_PauseResume" Width="60" Height="20" />
             <Button Content="Stop" Click="OnClick_Stop" Width="60" Height="20" />
-        </StackPanel>
-    </Grid>
+        </StackPanel>-->
+    </Canvas>
 </Window>
